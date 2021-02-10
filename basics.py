@@ -1,6 +1,10 @@
+'''
+Python basics
+Introduces basics
+'''
 print("Hello")
-
-str1="Keith Wright"
+# prints hello
+str1="Keith Wright" # my name
 str2="""401 Mile of Cars Way
 National City, CA 91950"""
 
