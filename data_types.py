@@ -1,40 +1,84 @@
-print("Hello")
-print("hello")
+'''
+Python data types
+Numbers are integers and floating point
+'''
+i = 10
+# i is integer (int)
+j = 3.4
 
-str1="Keith Wright"
-str2="""401 Mile of Cars Way
-National City, CA 91950"""
+'''
+Functions like int(), float(), str(), tuple(), list(), and dict()
+exist to convert one type of object to another type
+'''
+k = int(j)
+# k is an integer
+m = float(i)
+# m is a floating point number
+big = 3.1e3
+# j and big are floating point numbers (float)
 
-print(str1 + ' ' + str2)
-print(str1 + str2)
-print("Name:", str1, str2)
+'''
+Strings can be quoted with single or double quotes
+Balanced strings with three or more quotes are multi_line
+'''
+fname = "Keith "
+lname = 'Wright'
+# fname and lname are string
+name = fname + ' ' + lname
+age = 54
+print (name + " " + str(age))
+# string variable (str)
 
-dir(str1)
-help(str2.upper)
+balanced = '''triple single'''
+multi_line = '''401 Mile of Cars Way
+National City, CA 91950'''
+print(multi_line.upper())
 
-print(str2.upper())
-print(str2.isupper())
-print(str2)
+'''
+Boolean data types are True or False like alpha and beta
+true values:
+    True, 1, 'any', ['a'], ('one'), {'key':'value'}
+false values:
+    False, 0, 0.0, '', [], (), {}
+boolean operators:
+    and, or, not, ()
+'''
+alpha = True
+beta = False
+omega = not False
+gamma = alpha or beta
+delta = alpha and beta
+lamda = 1 and not 1 or 1
+zeta = 1 and not (1 or 1)
+print("lamda", lamda)
+print("zeta", zeta)
 
-data="This is a good day to learn Python"
-print("data[0:4] ->", data[0:4])
-print("data[:4] ->", data[:4]) # From beginning to fifth character
-print("data[-6:] ->", data[-6:]) # From six characters before the end to the end
+'''
+Lists are objects separated by commas in square brackets [] and can be updated
+'''
+fruit = ['apple', 'pear', 'peach']
+# list
+fruit.extend((name, alpha, i, j))
+print("Fruit list", fruit)
 
-colors=['red', 'blue', 'green', 'yellow']
-print ("Original order:", colors)
-colors.sort()
-print ("Sorted order:", colors)
-print ("colors[0:3] ->", colors[0:3])
+'''
+Tuples are objects separated by commas in parentheses () and can NOT be updated
+Conversion functions tuple() and list() can change from one type to the other
+'''
+colors = ('red', 'green', 'orange')
+tfruit = tuple(fruit)
+lcolors = list(colors)
+# tuple
 
-print("type(colors) ->", type(colors))
-print("dir(colors) ->", dir(colors))
+'''
+Dictionaries are objects with keys associated with values
+The different key and value pairs are separated by commas
+and each key is separated by a colon from its value
+'''
+phones = {619:'San Diego South', 858: 'San Diego North'}
+zipped = zip(colors, fruit)
+# zip() pairs up each item in the first object as a key with one item in the second object as a value
+fruitdict = dict(zipped)
 
-hue=('red', 'green', 'red', 'yellow')
-print("type(hue) ->", type(hue))
-print("dir(hue) ->", dir(hue))
+print("Fruit dictionary", fruitdict)
 
-info={"name": "Bob Smith", "age": 25, "title": "manager"}
-print ('info["name"] ->', info["name"])
-print ('info["age"] ->', info["age"])
-print("dir(info) ->", dir(info))
