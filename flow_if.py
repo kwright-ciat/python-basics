@@ -15,3 +15,9 @@ elif age > 17:
     print("old enough to drive")
 else:
     print("you can't drive yet")
+
+name=input("Enter your name: ")
+if name == 'Nick':
+    print("Hi there, Nick")
+else:
+    print("Hello, stranger")
