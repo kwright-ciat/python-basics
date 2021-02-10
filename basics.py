@@ -37,3 +37,8 @@ info={"name": "Bob Smith", "age": 25, "title": "manager"}
 print ('info["name"] ->', info["name"])
 print ('info["age"] ->', info["age"])
 print("dir(info) ->", dir(info))
+print("info.keys() ->", info.keys())
+print("info.values() ->", info.values())
+info.clear()
+print("len(info) ->", len(info))
+print("info.keys() ->", info.keys())
